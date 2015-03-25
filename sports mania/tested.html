@@ -1,0 +1,44 @@
+<script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryValidationTextarea.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
+<link href="SpryAssets/SpryValidationTextarea.css" rel="stylesheet" type="text/css">
+<form name="form1" method="post" action="">
+  <p>
+    <label for="firstname">First name</label>
+    <span id="sprytextfield2">
+    <input type="text" name="firstname" id="firstname">
+    <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldMinCharsMsg">Minimum number of characters not met.</span><span class="textfieldMaxCharsMsg">Exceeded maximum number of characters.</span></span>
+    <label for="Last name">Last name</label>
+    <span id="sprytextfield3">
+    <input type="text" name="Last name" id="Last name">
+    <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldMinCharsMsg">Minimum number of characters not met.</span><span class="textfieldMaxCharsMsg">Exceeded maximum number of characters.</span></span></p>
+  <p>D.O.B<span id="sprytextfield1">
+  <input type="text" name="D.O.B" id="D.O.B">
+  <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span><span class="textfieldMinValueMsg">The entered value is less than the minimum required.</span><span class="textfieldMaxValueMsg">The entered value is greater than the maximum allowed.</span></span></p>
+  <p>
+    <label for="address">Address</label>
+    <span id="sprytextarea1">
+    <textarea name="address" id="address" cols="45" rows="5"></textarea>
+    <span class="textareaRequiredMsg">A value is required.</span><span class="textareaMinCharsMsg">Minimum number of characters not met.</span><span class="textareaMaxCharsMsg">Exceeded maximum number of characters.</span></span></p>
+  <p>Gender: 
+    <input type="radio" name="radio" id="male" value="male">
+    <label for="male">Male</label>
+    <input type="radio" name="radio" id="female" value="female">
+    <label for="female">Female</label>
+  </p>
+  <p>
+    <label for="mobile no.">Mobile no.</label>
+    <span id="sprytextfield4">
+    <input type="text" name="mobile no." id="mobile no.">
+  <span class="textfieldInvalidFormatMsg">Invalid format.</span><span class="textfieldRequiredMsg">A value is required.</span></span></p>
+  <p>
+    <input type="submit" name="submit" id="submit" value="Submit">
+  </p>
+</form>
+<script type="text/javascript">
+var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1", "date", {minValue:10, maxValue:11, hint:"MM/DD/YY"});
+var sprytextarea1 = new Spry.Widget.ValidationTextarea("sprytextarea1", {minChars:10, maxChars:200, hint:"your living area(10-200)"});
+var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2", "none", {minChars:5, maxChars:10, hint:"your first name"});
+var sprytextfield3 = new Spry.Widget.ValidationTextField("sprytextfield3", "none", {minChars:5, maxChars:10, hint:"your last name"});
+var sprytextfield4 = new Spry.Widget.ValidationTextField("sprytextfield4", "phone_number");
+</script>
